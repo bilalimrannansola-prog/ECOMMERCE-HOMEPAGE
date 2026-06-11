@@ -1,20 +1,19 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
-import Products from "./components/Products";
-import Testimonials from "./components/Testimonials";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonials";
+import Products from "./components/Products";
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Categories />
-      <Products />
-      <Testimonials />
-      <Footer />
-    </>
-  );
+    <BrowserRouter>
+    <Routes>
+      <Route path="/footer"
+      element={<Footer />} />
+      <Route path="/Testimonials"
+      element={<Testimonials />} />
+      <Route path="/Products"
+      element={<Products />} />
+      </Routes>
+      </BrowserRouter>
+  )
 }
 export default App;
